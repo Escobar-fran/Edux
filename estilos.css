@@ -1,0 +1,403 @@
+/* =========================================================
+   EducSex Villa Victoria — estilos.css
+   Organización:
+   1. Variables de color y tipografía
+   2. Base y accesibilidad
+   3. Navegación
+   4. Secciones generales
+   5. Botones
+   6. Tarjetas (temas, mitos, recursos)
+   7. Buscador y filtros
+   8. Directorio
+   9. Examen y resultados
+   10. Formularios
+   11. Tabla de pruebas
+   12. Chat EduSex AI
+   13. Pie de página
+   14. Animaciones y movimiento reducido
+   ========================================================= */
+
+/* ---------- 1. Variables ---------- */
+:root {
+  --fondo: #070b14;
+  --fondo-alterno: #0d1424;
+  --superficie: #121b2f;
+  --superficie-2: #1a2540;
+  --borde: #2a3a5c;
+  --texto: #f2f6fc;
+  --texto-suave: #b9c4d8;
+  --neon-azul: #22d3ff;
+  --neon-verde: #3dff9a;
+  --neon-rosa: #ff6b9d;
+  --error: #ff8080;
+  --radio: 1rem;
+  --sombra-azul: 0 0 18px rgba(34, 211, 255, 0.35);
+  --sombra-verde: 0 0 18px rgba(61, 255, 154, 0.35);
+  --fuente: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- 2. Base y accesibilidad ---------- */
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente);
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+a { color: var(--neon-azul); }
+a:hover { color: var(--neon-verde); }
+
+/* Foco visible y claro para navegación con teclado */
+:focus-visible {
+  outline: 3px solid var(--neon-verde) !important;
+  outline-offset: 3px;
+  box-shadow: none !important;
+}
+
+.saltar-contenido {
+  position: absolute;
+  left: 1rem;
+  top: -60px;
+  z-index: 2000;
+  background: var(--neon-verde);
+  color: #000;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: 700;
+}
+.saltar-contenido:focus { top: 1rem; color: #000; }
+
+.texto-neon-azul { color: var(--neon-azul); }
+.texto-neon-verde { color: var(--neon-verde); }
+
+/* Bootstrap: textos de ayuda legibles sobre fondo oscuro */
+.form-text, .text-muted { color: var(--texto-suave) !important; }
+
+/* ---------- 3. Navegación ---------- */
+.barra-nav {
+  background: rgba(7, 11, 20, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--borde);
+}
+.marca { font-weight: 800; display: flex; align-items: center; gap: .5rem; }
+.logo {
+  display: inline-grid;
+  place-items: center;
+  width: 2.2rem; height: 2.2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--neon-azul), var(--neon-verde));
+  color: #000;
+}
+.barra-nav .nav-link {
+  color: var(--texto-suave);
+  border-radius: .5rem;
+  padding: .4rem .6rem !important;
+  white-space: nowrap;
+  font-size: .95rem;
+  transition: color .2s, background .2s;
+}
+.barra-nav .nav-link:hover { color: var(--texto); background: var(--superficie-2); }
+/* Indicador de sección seleccionada (Bootstrap ScrollSpy añade .active) */
+.barra-nav .nav-link.active {
+  color: #000 !important;
+  background: var(--neon-azul);
+  font-weight: 700;
+}
+
+/* ---------- 4. Secciones ---------- */
+.seccion { padding: 5rem 0; }
+.seccion-alterna { background: var(--fondo-alterno); }
+.seccion-hero {
+  padding-top: 8.5rem;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(34, 211, 255, 0.15), transparent 45%),
+    radial-gradient(circle at 85% 70%, rgba(61, 255, 154, 0.12), transparent 45%),
+    var(--fondo);
+}
+.titulo-hero { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15; }
+.titulo-seccion { font-weight: 800; font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
+.titulo-seccion i { color: var(--neon-azul); }
+.subtitulo-seccion { color: var(--texto-suave); margin-bottom: 1.5rem; }
+
+.etiqueta-neon {
+  display: inline-block;
+  border: 1px solid var(--neon-verde);
+  color: var(--neon-verde);
+  border-radius: 2rem;
+  padding: .2rem .9rem;
+  font-size: .9rem;
+}
+
+.tarjeta-destacada {
+  background: var(--superficie);
+  border: 1px solid var(--neon-azul);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra-azul);
+}
+.lista-destacada { padding-left: 1.1rem; margin: 0; }
+.lista-destacada li { margin-bottom: .6rem; }
+
+.tarjeta-tema-rapida {
+  display: flex; flex-direction: column; align-items: center; gap: .5rem;
+  padding: 1.2rem .5rem;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  color: var(--texto);
+  text-decoration: none;
+  text-align: center;
+  height: 100%;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.tarjeta-tema-rapida i { font-size: 1.8rem; color: var(--neon-verde); }
+.tarjeta-tema-rapida:hover { transform: translateY(-4px); border-color: var(--neon-verde); box-shadow: var(--sombra-verde); color: var(--texto); }
+
+.aviso-revision {
+  display: flex; gap: .8rem; align-items: flex-start;
+  background: rgba(255, 200, 60, 0.08);
+  border: 1px solid #ffc83c;
+  border-left-width: 6px;
+  border-radius: var(--radio);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.aviso-revision > i { color: #ffc83c; font-size: 1.3rem; margin-top: .2rem; }
+
+.insignia-revision { background: #ffc83c; color: #000; font-weight: 700; }
+
+.icono-gigante { font-size: 9rem; color: var(--neon-azul); filter: drop-shadow(0 0 20px rgba(34, 211, 255, .5)); }
+
+/* ---------- 5. Botones ---------- */
+.btn { border-radius: .8rem; font-weight: 600; transition: transform .15s, box-shadow .2s, background .2s; }
+.btn:hover { transform: translateY(-2px); }
+
+.btn-neon-azul { background: var(--neon-azul); color: #000; border: 2px solid var(--neon-azul); }
+.btn-neon-azul:hover, .btn-neon-azul:focus { background: #000; color: var(--neon-azul); box-shadow: var(--sombra-azul); }
+
+.btn-neon-verde { background: var(--neon-verde); color: #000; border: 2px solid var(--neon-verde); }
+.btn-neon-verde:hover, .btn-neon-verde:focus { background: #000; color: var(--neon-verde); box-shadow: var(--sombra-verde); }
+
+.btn-filtro {
+  background: transparent; color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 2rem;
+  padding: .35rem .9rem;
+}
+.btn-filtro:hover { border-color: var(--neon-azul); color: var(--neon-azul); }
+.btn-filtro[aria-pressed="true"] { background: var(--neon-azul); color: #000; border-color: var(--neon-azul); }
+
+/* ---------- 6. Tarjetas ---------- */
+.tarjeta-neon {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+}
+.tarjeta-neon:hover { border-color: var(--neon-azul); box-shadow: var(--sombra-azul); }
+
+.tarjeta-tema .icono-tema {
+  width: 3rem; height: 3rem;
+  display: grid; place-items: center;
+  border-radius: .8rem;
+  background: var(--superficie-2);
+  color: var(--neon-verde);
+  font-size: 1.4rem;
+}
+.tarjeta-tema h3 { font-size: 1.2rem; font-weight: 700; margin: 0; }
+.tarjeta-tema .detalle-tema {
+  border-top: 1px dashed var(--borde);
+  margin-top: 1rem; padding-top: 1rem;
+}
+.tarjeta-tema .detalle-tema h4 { font-size: 1rem; color: var(--neon-azul); margin-top: 1rem; }
+.fuentes-tema { font-size: .9rem; }
+
+.tarjeta-mito .etiqueta-mito {
+  display: inline-block; font-weight: 700; font-size: .8rem;
+  padding: .1rem .6rem; border-radius: 1rem;
+  background: var(--neon-rosa); color: #000;
+}
+.tarjeta-mito .realidad {
+  margin-top: 1rem; padding: 1rem;
+  border-radius: .8rem;
+  background: rgba(61, 255, 154, 0.08);
+  border-left: 4px solid var(--neon-verde);
+}
+.tarjeta-mito .etiqueta-realidad {
+  display: inline-block; font-weight: 700; font-size: .8rem;
+  padding: .1rem .6rem; border-radius: 1rem;
+  background: var(--neon-verde); color: #000;
+}
+
+/* Acordeón */
+.acordeon-neon .accordion-item { background: var(--superficie); border: 1px solid var(--borde); color: var(--texto); }
+.acordeon-neon .accordion-button { background: var(--superficie); color: var(--texto); font-weight: 600; }
+.acordeon-neon .accordion-button:not(.collapsed) { background: var(--superficie-2); color: var(--neon-azul); box-shadow: none; }
+.acordeon-neon .accordion-button::after { filter: invert(1); }
+.acordeon-neon .accordion-body { color: var(--texto); }
+
+/* ---------- 7. Buscador y filtros ---------- */
+.buscador { margin-bottom: 2rem; max-width: 720px; }
+.input-group-text { background: var(--superficie-2); color: var(--neon-azul); border-color: var(--borde); }
+.estado-busqueda { color: var(--neon-verde); font-weight: 600; min-height: 1.5rem; margin-top: .5rem; }
+.filtros { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .5rem; }
+
+/* ---------- 8. Directorio ---------- */
+.tarjeta-lugar { padding: 0; overflow: hidden; display: flex; flex-direction: column; height: 100%; }
+.tarjeta-lugar figure { margin: 0; position: relative; }
+.tarjeta-lugar img { width: 100%; height: 160px; object-fit: cover; display: block; background: var(--superficie-2); }
+.tarjeta-lugar figcaption {
+  position: absolute; bottom: .4rem; left: .4rem;
+  background: rgba(0, 0, 0, .75); color: var(--texto);
+  font-size: .75rem; padding: .1rem .5rem; border-radius: .4rem;
+}
+.tarjeta-lugar .cuerpo-lugar { padding: 1.2rem; display: flex; flex-direction: column; gap: .4rem; flex: 1; }
+.tarjeta-lugar h3 { font-size: 1.1rem; font-weight: 700; margin: 0; }
+.categoria-lugar { color: var(--neon-verde); font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+.dato-lugar { font-size: .92rem; margin: 0; }
+.dato-lugar i { color: var(--neon-azul); width: 1.2rem; }
+.pendiente { color: #ffc83c; font-style: italic; }
+.acciones-lugar { margin-top: auto; display: flex; flex-wrap: wrap; gap: .5rem; padding-top: .6rem; }
+
+.categoria-vacia {
+  background: var(--superficie);
+  border: 1px dashed #ffc83c;
+  border-radius: var(--radio);
+  padding: 1.2rem;
+}
+
+.modal-neon { background: var(--superficie); color: var(--texto); border: 1px solid var(--neon-azul); border-radius: var(--radio); }
+.modal-neon .modal-header, .modal-neon .modal-footer { border-color: var(--borde); }
+
+/* ---------- 9. Examen y resultados ---------- */
+.barra-progreso { height: .9rem; background: var(--superficie-2); border-radius: 1rem; }
+.barra-progreso .progress-bar { background: linear-gradient(90deg, var(--neon-azul), var(--neon-verde)); transition: width .3s; }
+
+.pregunta-examen legend { font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; }
+.opcion-examen {
+  display: flex; gap: .8rem; align-items: center;
+  padding: .8rem 1rem; margin-bottom: .6rem;
+  background: var(--superficie-2);
+  border: 2px solid var(--borde);
+  border-radius: .8rem;
+  cursor: pointer;
+  transition: border-color .2s;
+}
+.opcion-examen:hover { border-color: var(--neon-azul); }
+.opcion-examen input { width: 1.2rem; height: 1.2rem; accent-color: var(--neon-verde); flex-shrink: 0; }
+.opcion-examen:has(input:checked) { border-color: var(--neon-verde); background: rgba(61, 255, 154, .08); }
+.opcion-examen:has(input:focus-visible) { outline: 3px solid var(--neon-verde); outline-offset: 2px; }
+
+.alerta-neon {
+  background: rgba(34, 211, 255, 0.08);
+  border: 1px solid var(--neon-azul);
+  border-radius: var(--radio);
+  padding: 1rem 1.2rem;
+  margin-top: 1rem;
+}
+
+.tarjeta-resultado { text-align: center; }
+.calificacion-grande { font-size: 3.5rem; font-weight: 800; color: var(--neon-verde); line-height: 1; }
+.estadisticas { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.estadistica { background: var(--superficie-2); border-radius: .8rem; padding: 1rem; }
+.estadistica strong { display: block; font-size: 1.6rem; }
+.revision-pregunta { text-align: left; border-left: 4px solid var(--borde); padding: .8rem 1rem; margin-bottom: 1rem; background: var(--superficie-2); border-radius: .5rem; }
+.revision-pregunta.correcta { border-left-color: var(--neon-verde); }
+.revision-pregunta.incorrecta { border-left-color: var(--error); }
+.marca-correcta { color: var(--neon-verde); font-weight: 700; }
+.marca-incorrecta { color: var(--error); font-weight: 700; }
+
+/* ---------- 10. Formularios ---------- */
+.form-control, .form-select {
+  background: var(--superficie-2);
+  color: var(--texto);
+  border: 1px solid var(--borde);
+}
+.form-control:focus, .form-select:focus { background: var(--superficie-2); color: var(--texto); border-color: var(--neon-azul); }
+.form-control::placeholder { color: #8d9ab3; }
+.form-select option { background: var(--superficie); color: var(--texto); }
+.invalid-feedback { color: var(--error); font-weight: 600; }
+.form-control.is-invalid, .form-select.is-invalid { border-color: var(--error); border-width: 2px; }
+.form-check-input.is-invalid ~ .form-check-label { color: var(--error); }
+
+/* ---------- 11. Tabla de pruebas ---------- */
+.tabla-contenedor { border-radius: var(--radio); border: 1px solid var(--borde); }
+.tabla-pruebas { margin: 0; font-size: .9rem; --bs-table-bg: var(--superficie); }
+.tabla-pruebas caption { caption-side: top; color: var(--texto-suave); padding: .8rem 1rem; }
+.tabla-pruebas th { color: var(--neon-azul); white-space: nowrap; }
+.estado-prueba { font-weight: 700; padding: .15rem .6rem; border-radius: 1rem; white-space: nowrap; }
+.estado-pendiente { background: #ffc83c; color: #000; }
+.estado-aprobada { background: var(--neon-verde); color: #000; }
+.estado-correccion { background: var(--error); color: #000; }
+
+/* ---------- 12. Chat EduSex AI ---------- */
+.boton-chat {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 1050;
+  width: 3.8rem; height: 3.8rem; border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--neon-azul), var(--neon-verde));
+  color: #000; font-size: 1.6rem;
+  box-shadow: var(--sombra-azul);
+  transition: transform .2s;
+}
+.boton-chat:hover { transform: scale(1.08); }
+
+.ventana-chat {
+  position: fixed; right: 1.2rem; bottom: 5.8rem; z-index: 1060;
+  width: 380px; max-width: calc(100vw - 2rem);
+  height: 580px; max-height: calc(100vh - 7.5rem);
+  display: flex; flex-direction: column;
+  background: var(--superficie);
+  border: 1px solid var(--neon-azul);
+  border-radius: var(--radio);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .6), var(--sombra-azul);
+  overflow: hidden;
+}
+.ventana-chat[hidden] { display: none; }
+.chat-encabezado {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .8rem 1rem;
+  background: linear-gradient(135deg, rgba(34, 211, 255, .25), rgba(61, 255, 154, .2));
+  border-bottom: 1px solid var(--borde);
+}
+.chat-aviso { font-size: .78rem; color: var(--texto-suave); padding: .5rem 1rem; margin: 0; border-bottom: 1px solid var(--borde); }
+.chat-mensajes { flex: 1; overflow-y: auto; padding: 1rem; display: flex; flex-direction: column; gap: .6rem; }
+.burbuja { max-width: 88%; padding: .6rem .9rem; border-radius: 1rem; font-size: .93rem; }
+.burbuja-bot { background: var(--superficie-2); align-self: flex-start; border-bottom-left-radius: .2rem; }
+.burbuja-usuario { background: var(--neon-azul); color: #000; align-self: flex-end; border-bottom-right-radius: .2rem; }
+.burbuja-bot ul { padding-left: 1.1rem; margin: .4rem 0 0; }
+.mini-lugar { border: 1px solid var(--borde); border-radius: .6rem; padding: .5rem .7rem; margin-top: .5rem; font-size: .85rem; }
+.chat-rapidas { display: flex; gap: .4rem; overflow-x: auto; padding: .5rem 1rem; border-top: 1px solid var(--borde); }
+.chat-rapidas .btn { white-space: nowrap; font-size: .8rem; padding: .25rem .7rem; }
+.chat-formulario { display: flex; gap: .5rem; padding: .7rem 1rem; border-top: 1px solid var(--borde); }
+
+/* Chat a pantalla completa en celulares */
+@media (max-width: 576px) {
+  .ventana-chat { right: 0; bottom: 0; width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh; border-radius: 0; }
+  .seccion { padding: 3.5rem 0; }
+}
+
+/* ---------- 13. Pie de página ---------- */
+.pie { background: #000; border-top: 2px solid var(--neon-azul); padding: 2rem 0 5.5rem; color: var(--texto-suave); }
+.enlace-pie { color: var(--neon-verde); text-decoration: none; font-weight: 600; }
+
+/* ---------- 14. Animaciones ---------- */
+.animar { animation: aparecer .7s ease both; }
+@keyframes aparecer { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+
+.aparecer-suave { animation: aparecer .4s ease both; }
+
+/* Respeto a la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .btn:hover, .tarjeta-tema-rapida:hover, .boton-chat:hover { transform: none; }
+}

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EducSex Villa Victoria: información educativa sobre salud sexual y reproductiva para adolescentes y jóvenes de Villa Victoria, Estado de México.">
+  <title>EducSex Villa Victoria</title>
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#menuPrincipal" data-bs-root-margin="0px 0px -60%">
+
+  <!-- Enlace para saltar al contenido (accesibilidad) -->
+  <a class="saltar-contenido" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- ===================== ENCABEZADO Y MENÚ ===================== -->
+  <header>
+    <nav class="navbar navbar-expand-xxl navbar-dark fixed-top barra-nav" aria-label="Menú principal">
+      <div class="container-fluid">
+        <a class="navbar-brand marca" href="#inicio">
+          <span class="logo" aria-hidden="true"><i class="fa-solid fa-heart-pulse"></i></span>
+          EducSex <span class="texto-neon-verde">Villa Victoria</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuColapsable"
+                aria-controls="menuColapsable" aria-expanded="false" aria-label="Abrir o cerrar el menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuColapsable">
+          <ul class="navbar-nav ms-auto" id="menuPrincipal">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#salud">Salud sexual</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mitos">Mitos y realidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">Preguntas frecuentes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#recursos">Recursos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#directorio">Directorio local</a></li>
+            <li class="nav-item"><a class="nav-link" href="#asistente">Asistente</a></li>
+            <li class="nav-item"><a class="nav-link" href="#examen">Examen</a></li>
+            <li class="nav-item"><a class="nav-link" href="#orientacion">Orientación</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pruebas">Pruebas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#acerca">Acerca</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===================== INICIO ===================== -->
+    <section id="inicio" class="seccion seccion-hero" aria-labelledby="titulo-inicio">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7 animar">
+            <p class="etiqueta-neon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Villa Victoria, Estado de México</p>
+            <h1 id="titulo-inicio" class="titulo-hero">
+              Te damos la bienvenida a <span class="texto-neon-azul">EducSex</span> <span class="texto-neon-verde">Villa Victoria</span>
+            </h1>
+            <p class="lead">
+              Un espacio para adolescentes y jóvenes con información clara, respetuosa y basada en fuentes
+              sanitarias oficiales sobre salud sexual y reproductiva, y con pistas para encontrar apoyo cerca de ti.
+            </p>
+            <p>
+              Nuestro propósito es que tomes decisiones informadas sobre tu cuerpo, tus relaciones y tu salud.
+              Aquí no hay juicios: todas las dudas son válidas.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#salud" class="btn btn-neon-azul btn-lg"><i class="fa-solid fa-compass" aria-hidden="true"></i> Explorar temas</a>
+              <a href="#orientacion" class="btn btn-neon-verde btn-lg"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Buscar orientación</a>
+            </div>
+          </div>
+          <div class="col-lg-5 animar">
+            <div class="tarjeta-destacada">
+              <h2 class="h5"><i class="fa-solid fa-circle-info texto-neon-azul" aria-hidden="true"></i> Información destacada</h2>
+              <ul class="lista-destacada">
+                <li><strong>Algunas infecciones de transmisión sexual no presentan síntomas.</strong> La única forma de saberlo es con pruebas en servicios de salud.</li>
+                <li><strong>El condón</strong>, usado correctamente en cada relación, es el único método que ayuda a prevenir embarazo e ITS al mismo tiempo.</li>
+                <li><strong>Tienes derecho</strong> a recibir información y atención de salud con respeto y confidencialidad.</li>
+                <li><strong>En una emergencia</strong> llama al <a href="tel:911">911</a>. Para apoyo emocional: Línea de la Vida <a href="tel:8009112000">800 911 2000</a> (24 horas).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjetas temáticas de acceso rápido -->
+        <h2 class="h4 mt-5 mb-3">Temas principales</h2>
+        <div class="row g-3" id="tarjetasInicio">
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="tarjeta-tema-rapida" href="#tema-pubertad"><i class="fa-solid fa-seedling" aria-hidden="true"></i><span>Pubertad</span></a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="tarjeta-tema-rapida" href="#tema-consentimiento"><i class="fa-solid fa-handshake" aria-hidden="true"></i><span>Consentimiento</span></a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="tarjeta-tema-rapida" href="#tema-its"><i class="fa-solid fa-shield-virus" aria-hidden="true"></i><span>Prevenir ITS</span></a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="tarjeta-tema-rapida" href="#tema-anticonceptivos"><i class="fa-solid fa-pills" aria-hidden="true"></i><span>Anticonceptivos</span></a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="tarjeta-tema-rapida" href="#tema-derechos"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i><span>Derechos</span></a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a class="tarjeta-tema-rapida" href="#tema-violencia"><i class="fa-solid fa-hand" aria-hidden="true"></i><span>Prevenir violencia</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SALUD SEXUAL (TEMAS) ===================== -->
+    <section id="salud" class="seccion" aria-labelledby="titulo-salud">
+      <div class="container">
+        <h2 id="titulo-salud" class="titulo-seccion"><i class="fa-solid fa-book-medical" aria-hidden="true"></i> Salud sexual y reproductiva</h2>
+        <p class="subtitulo-seccion">Temas explicados con lenguaje sencillo. Pulsa “Leer más” para ver el contenido completo, recomendaciones y fuentes.</p>
+
+        <div class="aviso-revision" role="note">
+          <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
+          <div>
+            <strong>Estado de revisión:</strong> los contenidos fueron redactados a partir de fuentes oficiales y revisados por el equipo del proyecto
+            el <time datetime="2026-10-26">26 de octubre de 2026</time>.
+            <strong>Aún no han sido revisados por personal de salud ni docentes.</strong>
+            Los temas marcados con <span class="badge insignia-revision">Requiere revisión</span> deben validarse antes de un uso oficial.
+          </div>
+        </div>
+
+        <!-- Buscador de temas -->
+        <form class="buscador" role="search" aria-label="Buscar temas" id="formBuscador">
+          <label for="campoBusqueda" class="form-label">Buscar en temas y mitos</label>
+          <div class="input-group">
+            <span class="input-group-text" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="search" class="form-control" id="campoBusqueda" placeholder="Ej.: condón, pubertad, consentimiento" autocomplete="off" aria-describedby="estadoBusqueda">
+            <button class="btn btn-outline-light" type="button" id="btnLimpiarBusqueda">Limpiar</button>
+          </div>
+          <p id="estadoBusqueda" class="estado-busqueda" role="status" aria-live="polite"></p>
+        </form>
+
+        <!-- Las tarjetas de temas se generan desde script.js -->
+        <div class="row g-4" id="contenedorTemas"></div>
+      </div>
+    </section>
+
+    <!-- ===================== MITOS Y REALIDADES ===================== -->
+    <section id="mitos" class="seccion seccion-alterna" aria-labelledby="titulo-mitos">
+      <div class="container">
+        <h2 id="titulo-mitos" class="titulo-seccion"><i class="fa-solid fa-lightbulb" aria-hidden="true"></i> Mitos y realidades</h2>
+        <p class="subtitulo-seccion">Lee cada mito y pulsa el botón para revelar lo que dicen las fuentes de salud.</p>
+        <div class="row g-4" id="contenedorMitos"></div>
+        <p id="estadoMitos" class="estado-busqueda" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ===================== PREGUNTAS FRECUENTES ===================== -->
+    <section id="faq" class="seccion" aria-labelledby="titulo-faq">
+      <div class="container">
+        <h2 id="titulo-faq" class="titulo-seccion"><i class="fa-solid fa-circle-question" aria-hidden="true"></i> Preguntas frecuentes</h2>
+        <p class="subtitulo-seccion">Respuestas breves a dudas comunes. No sustituyen una consulta con personal de salud.</p>
+
+        <div class="accordion acordeon-neon" id="acordeonFaq">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq-h1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c1" aria-expanded="false" aria-controls="faq-c1">
+                ¿Puedo ir sola, solo o sole al centro de salud a pedir información?
+              </button>
+            </h3>
+            <div id="faq-c1" class="accordion-collapse collapse" aria-labelledby="faq-h1" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body">
+                Las y los adolescentes tienen derecho a recibir información y orientación en salud sexual y reproductiva.
+                Puedes acudir a tu centro de salud y preguntar por orientación para adolescentes. Si te piden algún requisito,
+                pregúntalo con confianza. <em>Recomendación: confirma con la unidad los requisitos de atención.</em>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq-h2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c2" aria-expanded="false" aria-controls="faq-c2">
+                ¿Con una sola relación sexual sin protección puede haber embarazo?
+              </button>
+            </h3>
+            <div id="faq-c2" class="accordion-collapse collapse" aria-labelledby="faq-h2" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body">
+                Sí. Puede ocurrir un embarazo desde la primera relación sexual con penetración vaginal sin protección.
+                Si eso pasó, acude pronto a un servicio de salud: la anticoncepción de emergencia funciona mejor mientras antes se use.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq-h3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c3" aria-expanded="false" aria-controls="faq-c3">
+                ¿Cómo sé si tengo una infección de transmisión sexual?
+              </button>
+            </h3>
+            <div id="faq-c3" class="accordion-collapse collapse" aria-labelledby="faq-h3" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body">
+                Muchas ITS no presentan síntomas. Solo personal de salud puede indicar las pruebas adecuadas.
+                Si tuviste relaciones sin protección o notas cambios (flujo, ardor, llagas, verrugas), acude a consulta.
+                Esta página <strong>no hace diagnósticos</strong>.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq-h4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c4" aria-expanded="false" aria-controls="faq-c4">
+                ¿Qué hago si alguien me presiona para tener relaciones?
+              </button>
+            </h3>
+            <div id="faq-c4" class="accordion-collapse collapse" aria-labelledby="faq-h4" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body">
+                Nadie tiene derecho a presionarte. Puedes decir que no, en cualquier momento, aunque antes hayas dicho que sí.
+                Habla con una persona adulta de confianza. Si estás en peligro, llama al <a href="tel:911">911</a>.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq-h5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c5" aria-expanded="false" aria-controls="faq-c5">
+                ¿Es normal que mi cuerpo cambie distinto que el de mis amistades?
+              </button>
+            </h3>
+            <div id="faq-c5" class="accordion-collapse collapse" aria-labelledby="faq-h5" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body">
+                Sí. La pubertad empieza y avanza a ritmos diferentes en cada persona. Si tienes dudas o algo te preocupa,
+                consulta a personal de salud.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq-h6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-c6" aria-expanded="false" aria-controls="faq-c6">
+                ¿Esta página guarda lo que escribo?
+              </button>
+            </h3>
+            <div id="faq-c6" class="accordion-collapse collapse" aria-labelledby="faq-h6" data-bs-parent="#acordeonFaq">
+              <div class="accordion-body">
+                No. Los formularios son demostrativos y no envían datos. El asistente y el examen no guardan tus mensajes ni respuestas:
+                todo se borra al recargar o cerrar la página.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RECURSOS CONFIABLES ===================== -->
+    <section id="recursos" class="seccion seccion-alterna" aria-labelledby="titulo-recursos">
+      <div class="container">
+        <h2 id="titulo-recursos" class="titulo-seccion"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Recursos confiables</h2>
+        <p class="subtitulo-seccion">Fuentes sanitarias oficiales. Los enlaces abren en una pestaña nueva. Última revisión de enlaces: <time datetime="2026-10-26">26/10/2026</time>.</p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="tarjeta-neon h-100">
+              <h3 class="h5"><i class="fa-solid fa-hospital texto-neon-azul" aria-hidden="true"></i> Secretaría de Salud</h3>
+              <p>Información oficial del Gobierno de México sobre salud y programas públicos.</p>
+              <a class="btn btn-neon-azul btn-sm" href="https://www.gob.mx/salud" target="_blank" rel="noopener noreferrer">Visitar gob.mx/salud <span class="visually-hidden">(abre en pestaña nueva)</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="tarjeta-neon h-100">
+              <h3 class="h5"><i class="fa-solid fa-ribbon texto-neon-azul" aria-hidden="true"></i> CENSIDA</h3>
+              <p>Centro Nacional para la Prevención y el Control del VIH y el sida.</p>
+              <a class="btn btn-neon-azul btn-sm" href="https://www.gob.mx/censida" target="_blank" rel="noopener noreferrer">Visitar gob.mx/censida <span class="visually-hidden">(abre en pestaña nueva)</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="tarjeta-neon h-100">
+              <h3 class="h5"><i class="fa-solid fa-earth-americas texto-neon-azul" aria-hidden="true"></i> Organización Mundial de la Salud</h3>
+              <p>Datos y notas descriptivas sobre salud sexual, ITS y anticoncepción.</p>
+              <a class="btn btn-neon-azul btn-sm" href="https://www.who.int/es/health-topics/sexual-health" target="_blank" rel="noopener noreferrer">Visitar OMS <span class="visually-hidden">(abre en pestaña nueva)</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="tarjeta-neon h-100">
+              <h3 class="h5"><i class="fa-solid fa-people-group texto-neon-azul" aria-hidden="true"></i> UNFPA México</h3>
+              <p>Fondo de Población de las Naciones Unidas: derechos y salud sexual y reproductiva.</p>
+              <a class="btn btn-neon-azul btn-sm" href="https://mexico.unfpa.org/es" target="_blank" rel="noopener noreferrer">Visitar UNFPA México <span class="visually-hidden">(abre en pestaña nueva)</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="tarjeta-neon h-100">
+              <h3 class="h5"><i class="fa-solid fa-house-medical texto-neon-azul" aria-hidden="true"></i> Instituto de Salud del Estado de México</h3>
+              <p>Servicios de salud públicos en el Estado de México (ISEM).</p>
+              <a class="btn btn-neon-azul btn-sm" href="https://salud.edomex.gob.mx/isem/" target="_blank" rel="noopener noreferrer">Visitar ISEM <span class="visually-hidden">(abre en pestaña nueva)</span></a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="tarjeta-neon h-100">
+              <h3 class="h5"><i class="fa-solid fa-phone texto-neon-verde" aria-hidden="true"></i> Líneas de ayuda</h3>
+              <p><strong>Emergencias:</strong> <a href="tel:911">911</a><br>
+                 <strong>Línea de la Vida</strong> (salud mental, adicciones, crisis): <a href="tel:8009112000">800 911 2000</a>, gratuita, 24 horas.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DIRECTORIO LOCAL ===================== -->
+    <section id="directorio" class="seccion" aria-labelledby="titulo-directorio">
+      <div class="container">
+        <h2 id="titulo-directorio" class="titulo-seccion"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Encuentra orientación y servicios de salud en Villa Victoria</h2>
+        <p class="subtitulo-seccion">Lugares públicos donde puedes solicitar información y atención de salud.</p>
+
+        <div class="aviso-revision" role="note">
+          <i class="fa-solid fa-database" aria-hidden="true"></i>
+          <div>
+            <strong>Origen de los datos:</strong> nombres, localidades y tipo de unidad provienen del
+            <a href="http://www.dgis.salud.gob.mx/contenidos/intercambio/clues_gobmx.html" target="_blank" rel="noopener noreferrer">Catálogo de Clave Única de Establecimientos de Salud (CLUES) de la Secretaría de Salud</a>
+            (cierre 2019, unidades “en operación”). Calles, horarios y teléfonos no estaban disponibles en fuentes oficiales consultadas y se
+            muestran como <em>“Información pendiente de verificación”</em>. Las imágenes son <strong>ilustraciones</strong>, no fotografías de los lugares.
+            Llama o acude antes para confirmar servicios y horarios.
+          </div>
+        </div>
+
+        <div class="row g-3 align-items-end mb-3">
+          <div class="col-md-6">
+            <label for="buscadorDirectorio" class="form-label">Buscar por nombre, categoría o localidad</label>
+            <input type="search" id="buscadorDirectorio" class="form-control" placeholder="Ej.: Palizada, hospital, psicológico" autocomplete="off" aria-describedby="estadoDirectorio">
+          </div>
+          <div class="col-md-6 text-md-end">
+            <button type="button" class="btn btn-neon-verde" id="btnAyudaServicio">
+              <i class="fa-solid fa-robot" aria-hidden="true"></i> ¿Necesitas ayuda para encontrar un servicio?
+            </button>
+          </div>
+        </div>
+
+        <div class="filtros" role="group" aria-label="Filtrar por categoría" id="filtrosDirectorio"></div>
+        <p id="estadoDirectorio" class="estado-busqueda" role="status" aria-live="polite"></p>
+        <div class="row g-4" id="contenedorDirectorio"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ASISTENTE VIRTUAL (presentación) ===================== -->
+    <section id="asistente" class="seccion seccion-alterna" aria-labelledby="titulo-asistente">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h2 id="titulo-asistente" class="titulo-seccion"><i class="fa-solid fa-robot" aria-hidden="true"></i> Asistente virtual EduSex AI</h2>
+            <p class="subtitulo-seccion">Tu asistente de información y orientación.</p>
+            <p>
+              EduSex AI responde preguntas frecuentes usando respuestas previamente preparadas por categorías y palabras clave.
+              <strong>No está conectado a una inteligencia artificial externa</strong>, no guarda tus mensajes y no hace diagnósticos.
+            </p>
+            <button type="button" class="btn btn-neon-azul btn-lg" id="btnAbrirAsistenteSeccion">
+              <i class="fa-solid fa-comments" aria-hidden="true"></i> Abrir EduSex AI
+            </button>
+          </div>
+          <div class="col-lg-4 text-center" aria-hidden="true">
+            <i class="fa-solid fa-robot icono-gigante"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXAMEN ===================== -->
+    <section id="examen" class="seccion" aria-labelledby="titulo-examen">
+      <div class="container">
+        <h2 id="titulo-examen" class="titulo-seccion"><i class="fa-solid fa-clipboard-question" aria-hidden="true"></i> Pon a prueba tus conocimientos</h2>
+        <p class="subtitulo-seccion">Descubre cuánto sabes sobre salud sexual y relaciones saludables.</p>
+
+        <div class="tarjeta-neon" id="zonaExamen">
+          <!-- Progreso -->
+          <div class="d-flex justify-content-between flex-wrap gap-2 mb-2">
+            <span id="indicadorPregunta" class="fw-semibold">Pregunta 1 de 10</span>
+            <span id="indicadorContestadas">Contestadas: 0 de 10</span>
+          </div>
+          <div class="progress barra-progreso mb-4" role="progressbar" aria-label="Avance del examen" id="barraExamen"
+               aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" id="barraExamenRelleno" style="width: 0%"></div>
+          </div>
+
+          <!-- Pregunta actual (generada desde script.js) -->
+          <div id="contenedorPregunta" aria-live="polite"></div>
+
+          <!-- Aviso de preguntas pendientes -->
+          <div id="avisoPendientes" class="alerta-neon d-none" role="alert" tabindex="-1"></div>
+
+          <!-- Navegación -->
+          <div class="d-flex flex-wrap gap-2 justify-content-between mt-4">
+            <button type="button" class="btn btn-outline-light" id="btnAnterior"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Anterior</button>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="button" class="btn btn-neon-azul" id="btnSiguiente">Siguiente <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+              <button type="button" class="btn btn-neon-verde" id="btnFinalizar"><i class="fa-solid fa-flag-checkered" aria-hidden="true"></i> Finalizar examen</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resultados (generados desde script.js) -->
+        <div id="zonaResultados" class="d-none" tabindex="-1" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ORIENTACIÓN Y CONTACTO ===================== -->
+    <section id="orientacion" class="seccion seccion-alterna" aria-labelledby="titulo-orientacion">
+      <div class="container">
+        <h2 id="titulo-orientacion" class="titulo-seccion"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i> Buscar orientación y contacto</h2>
+        <div class="alerta-neon mb-4" role="note">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          <strong>Formularios demostrativos:</strong> este proyecto no tiene servidor, por lo que <strong>no se envía ni se guarda ningún dato</strong>.
+          Para recibir orientación real, acude al <a href="#directorio">directorio local</a> o a los <a href="#recursos">recursos oficiales</a>.
+          No escribas información personal sensible.
+        </div>
+
+        <div class="row g-4">
+          <!-- Formulario de orientación -->
+          <div class="col-lg-6">
+            <form class="tarjeta-neon h-100" id="formOrientacion" novalidate aria-labelledby="titulo-form-orientacion">
+              <h3 class="h5" id="titulo-form-orientacion">Formulario de orientación</h3>
+              <div class="mb-3">
+                <label for="oriCategoria" class="form-label">Categoría <span aria-hidden="true">*</span><span class="visually-hidden">(obligatorio)</span></label>
+                <select id="oriCategoria" class="form-select" required aria-describedby="oriCategoriaError">
+                  <option value="">Elige una categoría</option>
+                  <option>Información general</option>
+                  <option>Salud sexual</option>
+                  <option>Anticonceptivos</option>
+                  <option>Prevención de infecciones</option>
+                  <option>Relaciones saludables</option>
+                  <option>Derechos sexuales</option>
+                  <option>Otro tema</option>
+                </select>
+                <div class="invalid-feedback" id="oriCategoriaError"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Selecciona una categoría.</div>
+              </div>
+              <div class="mb-3">
+                <label for="oriDuda" class="form-label">Tu duda <span aria-hidden="true">*</span><span class="visually-hidden">(obligatorio)</span></label>
+                <textarea id="oriDuda" class="form-control" rows="4" required minlength="10" maxlength="500" aria-describedby="oriDudaAyuda oriDudaError"></textarea>
+                <div id="oriDudaAyuda" class="form-text">Mínimo 10 caracteres. No incluyas tu nombre completo, dirección ni datos íntimos.</div>
+                <div class="invalid-feedback" id="oriDudaError"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Escribe tu duda (mínimo 10 caracteres).</div>
+              </div>
+              <button type="submit" class="btn btn-neon-verde">Ver recursos sugeridos</button>
+              <div id="resultadoOrientacion" class="mt-3" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+          <!-- Formulario de contacto -->
+          <div class="col-lg-6">
+            <form class="tarjeta-neon h-100" id="formContacto" novalidate aria-labelledby="titulo-form-contacto">
+              <h3 class="h5" id="titulo-form-contacto">Formulario de contacto</h3>
+              <div class="mb-3">
+                <label for="conNombre" class="form-label">Nombre o alias (opcional)</label>
+                <input type="text" id="conNombre" class="form-control" maxlength="40" autocomplete="nickname">
+              </div>
+              <div class="mb-3">
+                <label for="conCorreo" class="form-label">Correo electrónico (opcional)</label>
+                <input type="email" id="conCorreo" class="form-control" autocomplete="email" aria-describedby="conCorreoError">
+                <div class="invalid-feedback" id="conCorreoError"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Escribe un correo válido, por ejemplo nombre@dominio.com, o déjalo vacío.</div>
+              </div>
+              <div class="mb-3">
+                <label for="conTema" class="form-label">Tema <span aria-hidden="true">*</span><span class="visually-hidden">(obligatorio)</span></label>
+                <select id="conTema" class="form-select" required aria-describedby="conTemaError">
+                  <option value="">Elige un tema</option>
+                  <option>Sugerencia sobre la página</option>
+                  <option>Error en un contenido</option>
+                  <option>Actualizar un dato del directorio</option>
+                  <option>Otro</option>
+                </select>
+                <div class="invalid-feedback" id="conTemaError"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Selecciona un tema.</div>
+              </div>
+              <div class="mb-3">
+                <label for="conMensaje" class="form-label">Mensaje <span aria-hidden="true">*</span><span class="visually-hidden">(obligatorio)</span></label>
+                <textarea id="conMensaje" class="form-control" rows="4" required minlength="10" maxlength="800" aria-describedby="conMensajeError"></textarea>
+                <div class="invalid-feedback" id="conMensajeError"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Escribe un mensaje de al menos 10 caracteres.</div>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="conPrivacidad" aria-describedby="conPrivacidadError conPrivacidadTexto">
+                <label class="form-check-label" for="conPrivacidad">He leído el aviso de privacidad (obligatorio si escribes un correo).</label>
+                <p id="conPrivacidadTexto" class="form-text">Aviso de privacidad (demostrativo): esta página no envía, almacena ni comparte los datos escritos en los formularios.</p>
+                <div class="invalid-feedback" id="conPrivacidadError"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i> Si escribes un correo, debes aceptar el aviso de privacidad.</div>
+              </div>
+              <button type="submit" class="btn btn-neon-azul">Validar mensaje</button>
+              <div id="resultadoContacto" class="mt-3" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRUEBAS DE USABILIDAD ===================== -->
+    <section id="pruebas" class="seccion" aria-labelledby="titulo-pruebas">
+      <div class="container">
+        <h2 id="titulo-pruebas" class="titulo-seccion"><i class="fa-solid fa-list-check" aria-hidden="true"></i> Pruebas de usabilidad</h2>
+        <p class="subtitulo-seccion">
+          Plan de pruebas. Todas inician en estado <strong>“Pendiente”</strong>: el resultado obtenido debe registrarse después de ejecutarlas con personas usuarias.
+          Estados posibles: Pendiente, Aprobada, Requiere corrección.
+        </p>
+        <div class="table-responsive tabla-contenedor">
+          <table class="table table-dark table-striped align-middle tabla-pruebas">
+            <caption>Tabla de pruebas de usabilidad de EducSex Villa Victoria</caption>
+            <thead>
+              <tr>
+                <th scope="col">N.º</th>
+                <th scope="col">Funcionalidad evaluada</th>
+                <th scope="col">Procedimiento</th>
+                <th scope="col">Resultado esperado</th>
+                <th scope="col">Resultado obtenido</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Observaciones</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoPruebas"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ACERCA DEL PROYECTO ===================== -->
+    <section id="acerca" class="seccion seccion-alterna" aria-labelledby="titulo-acerca">
+      <div class="container">
+        <h2 id="titulo-acerca" class="titulo-seccion"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Acerca del proyecto</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <dl class="tarjeta-neon h-100 lista-acerca">
+              <dt>Nombre</dt><dd>EducSex Villa Victoria</dd>
+              <dt>Localidad</dt><dd>Villa Victoria, Estado de México</dd>
+              <dt>Objetivo general</dt><dd>Ofrecer a adolescentes y jóvenes información confiable, clara y accesible sobre salud sexual y reproductiva, y facilitar el acceso a recursos de apoyo.</dd>
+              <dt>Público</dt><dd>Adolescentes y jóvenes del municipio, así como docentes y familias.</dd>
+              <dt>Tecnologías</dt><dd>HTML5, CSS3, JavaScript, Bootstrap 5 y Font Awesome.</dd>
+            </dl>
+          </div>
+          <div class="col-md-6">
+            <div class="tarjeta-neon h-100">
+              <h3 class="h5">Alcance</h3>
+              <p>Contenidos educativos, mitos y realidades, preguntas frecuentes, recursos oficiales, directorio local, asistente con respuestas preparadas, examen interactivo y plan de pruebas.</p>
+              <h3 class="h5">Limitaciones</h3>
+              <ul>
+                <li>Los contenidos no han sido revisados aún por personal de salud ni docentes.</li>
+                <li>El directorio tiene datos parciales: calles, horarios y teléfonos pendientes de verificación.</li>
+                <li>Los formularios son demostrativos (no hay servidor).</li>
+                <li>El asistente no usa inteligencia artificial externa y no diagnostica.</li>
+                <li>No sustituye la atención médica ni la orientación profesional.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer class="pie">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <p class="mb-1 fw-bold">EducSex Villa Victoria</p>
+          <p class="mb-1">Información educativa. No sustituye la atención médica ni la orientación profesional.</p>
+          <p class="mb-0">Revisión de contenidos: <time datetime="2026-10-26">26 de octubre de 2026</time>.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-1">Emergencias: <a href="tel:911">911</a> · Línea de la Vida: <a href="tel:8009112000">800 911 2000</a></p>
+          <a href="#inicio" class="enlace-pie"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Volver al inicio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== MODAL: DETALLE DEL DIRECTORIO ===================== -->
+  <div class="modal fade" id="modalDirectorio" tabindex="-1" aria-labelledby="modalDirectorioTitulo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content modal-neon">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="modalDirectorioTitulo">Detalle</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar detalle"></button>
+        </div>
+        <div class="modal-body" id="modalDirectorioCuerpo"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== CHAT EduSex AI ===================== -->
+  <button type="button" class="boton-chat" id="btnChatFlotante" aria-controls="ventanaChat" aria-expanded="false" aria-label="Abrir asistente EduSex AI">
+    <i class="fa-solid fa-comment-medical" aria-hidden="true"></i>
+  </button>
+
+  <div class="ventana-chat" id="ventanaChat" role="dialog" aria-modal="false" aria-labelledby="chatTitulo" hidden>
+    <div class="chat-encabezado">
+      <div>
+        <p class="mb-0 fw-bold" id="chatTitulo"><i class="fa-solid fa-robot" aria-hidden="true"></i> EduSex AI</p>
+        <p class="mb-0 small">Tu asistente de información y orientación</p>
+      </div>
+      <div class="d-flex gap-1">
+        <button type="button" class="btn btn-sm btn-outline-light" id="btnBorrarChat" aria-label="Borrar conversación"><i class="fa-solid fa-trash-can" aria-hidden="true"></i></button>
+        <button type="button" class="btn btn-sm btn-outline-light" id="btnCerrarChat" aria-label="Cerrar asistente"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    <p class="chat-aviso">
+      EduSex ofrece información educativa. No sustituye la atención médica ni la orientación profesional.
+      <a href="#recursos" id="btnRecursosChat" class="btn btn-sm btn-neon-verde mt-1">Consultar recursos oficiales</a>
+    </p>
+    <div class="chat-mensajes" id="chatMensajes" role="log" aria-live="polite" aria-label="Conversación"></div>
+    <div class="chat-rapidas" id="chatRapidas" role="group" aria-label="Preguntas rápidas"></div>
+    <form class="chat-formulario" id="formChat" autocomplete="off">
+      <label for="campoChat" class="visually-hidden">Escribe tu pregunta</label>
+      <input type="text" id="campoChat" class="form-control" placeholder="Escribe tu pregunta…" maxlength="300">
+      <button type="submit" class="btn btn-neon-azul" aria-label="Enviar mensaje"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+    </form>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
